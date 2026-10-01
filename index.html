@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BIKEFIT | Análisis biomecánico</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         PORTADA
+    ====================================================== -->
+
+    <header class="hero">
+
+        <nav class="navbar">
+
+            <div class="marca">
+                BIKEFIT
+            </div>
+
+            <div class="nav-derecha">
+                BIOMECÁNICA · BICICLETA FIJA
+            </div>
+
+        </nav>
+
+
+        <div class="hero-contenido">
+
+            <p class="etiqueta">
+                HERRAMIENTA DE ORIENTACIÓN BIOMECÁNICA
+            </p>
+
+            <h1>
+                Ajustá tu bicicleta
+                <span>a vos.</span>
+            </h1>
+
+            <p class="descripcion-hero">
+                Una herramienta para estimar una configuración
+                inicial de tu bicicleta fija a partir de tus
+                medidas corporales y de la bicicleta.
+            </p>
+
+            <a href="#evaluacion" class="boton-inicio">
+                COMENZAR ANÁLISIS
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =====================================================
+             INTRODUCCIÓN
+        ====================================================== -->
+
+        <section class="introduccion">
+
+            <div class="intro-texto">
+
+                <p class="etiqueta">
+                    ANTES DE EMPEZAR
+                </p>
+
+                <h2>
+                    Tu bicicleta debería
+                    adaptarse a vos,
+                    <em>no al revés.</em>
+                </h2>
+
+            </div>
+
+
+            <div class="intro-descripcion">
+
+                <p>
+                    Una configuración adecuada comienza
+                    conociendo tus propias medidas.
+                </p>
+
+                <p>
+                    BIKEFIT utiliza datos antropométricos
+                    y medidas simples de tu bicicleta fija
+                    para proporcionar una orientación inicial.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             EVALUACIÓN
+        ====================================================== -->
+
+        <section id="evaluacion" class="evaluacion">
+
+            <div class="titulo-seccion">
+
+                <p class="etiqueta">
+                    EVALUACIÓN
+                </p>
+
+                <h2>
+                    Empecemos con tus medidas.
+                </h2>
+
+                <p>
+                    Solo necesitás un centímetro.
+                    Te mostramos cómo tomar cada medida.
+                </p>
+
+            </div>
+
+
+            <div class="formulario-grid">
+
+                <!-- =================================================
+                     MEDIDAS CORPORALES
+                ================================================== -->
+
+                <article class="panel">
+
+                    <div class="panel-titulo">
+
+                        <p>
+                            SOBRE VOS
+                        </p>
+
+                        <h3>
+                            Medidas corporales
+                        </h3>
+
+                    </div>
+
+
+                    <!-- ESTATURA -->
+
+                    <div class="campo">
+
+                        <label for="estatura">
+                            Estatura
+                        </label>
+
+                        <div class="input-unidad">
+
+                            <input
+                                type="number"
+                                id="estatura"
+                                placeholder="Ej. 175"
+                                min="1"
+                                step="0.1">
+
+                            <span>cm</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LONGITUD DE LA PIERNA -->
+
+                    <div class="campo">
+
+                        <label for="longitudPierna">
+                            Longitud de la pierna
+                        </label>
+
+                        <div class="input-unidad">
+
+                            <input
+                                type="number"
+                                id="longitudPierna"
+                                placeholder="Ej. 98"
+                                min="1"
+                                step="0.1">
+
+                            <span>cm</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <details class="como-medir">
+
+                        <summary>
+                            ¿Cómo medir la longitud de la pierna?
+                            <span>+</span>
+                        </summary>
+
+                        <div class="detalle-contenido">
+
+                            <p>
+                                Ponete descalzo/a y derecho/a
+                                contra una pared.
+                            </p>
+
+                            <p>
+                                Colocá un libro entre las piernas,
+                                simulando el apoyo del asiento.
+                            </p>
+
+                            <p>
+                                Medí desde el piso hasta el borde
+                                superior del libro.
+                            </p>
+
+                        </div>
+
+                    </details>
+
+                </article>
+
+
+                <!-- =================================================
+                     BICICLETA
+                ================================================== -->
+
+                <article class="panel panel-oscuro">
+
+                    <div class="panel-titulo">
+
+                        <p>
+                            TU BICICLETA
+                        </p>
+
+                        <h3>
+                            Configuración actual
+                        </h3>
+
+                    </div>
+
+
+                    <!-- ALTURA DEL ASIENTO -->
+
+                    <div class="campo">
+
+                        <label for="alturaAsiento">
+
+                            Altura actual del asiento
+
+                            <span class="opcional">
+                                OPCIONAL
+                            </span>
+
+                        </label>
+
+                        <div class="input-unidad">
+
+                            <input
+                                type="number"
+                                id="alturaAsiento"
+                                placeholder="Podés dejarlo vacío"
+                                min="1"
+                                step="0.1">
+
+                            <span>cm</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <details class="como-medir">
+
+                        <summary>
+                            ¿Cómo medir la altura del asiento?
+                            <span>+</span>
+                        </summary>
+
+                        <div class="detalle-contenido">
+
+                            <p>
+                                Medí desde el piso hasta la parte
+                                superior central del asiento,
+                                manteniendo el centímetro vertical.
+                            </p>
+
+                            <p>
+                                Si no conocés esta medida,
+                                podés dejar el campo vacío.
+                            </p>
+
+                        </div>
+
+                    </details>
+
+
+                    <!-- DISTANCIA ASIENTO MANUBRIO -->
+
+                    <div class="campo">
+
+                        <label for="distanciaManubrio">
+                            Distancia asiento–manubrio
+                        </label>
+
+                        <div class="input-unidad">
+
+                            <input
+                                type="number"
+                                id="distanciaManubrio"
+                                placeholder="Ej. 77"
+                                min="1"
+                                step="0.1">
+
+                            <span>cm</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <details class="como-medir">
+
+                        <summary>
+                            ¿Cómo medir asiento–manubrio?
+                            <span>+</span>
+                        </summary>
+
+                        <div class="detalle-contenido">
+
+                            <p>
+                                Medí horizontalmente desde la parte
+                                delantera central del asiento hasta
+                                el centro de la zona de agarre
+                                del manubrio.
+                            </p>
+
+                        </div>
+
+                    </details>
+
+
+                    <!-- ALTURA MANUBRIO -->
+
+                    <div class="campo">
+
+                        <label for="alturaManubrio">
+                            Altura del manubrio
+                        </label>
+
+                        <div class="input-unidad">
+
+                            <input
+                                type="number"
+                                id="alturaManubrio"
+                                placeholder="Ej. 100"
+                                min="1"
+                                step="0.1">
+
+                            <span>cm</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <details class="como-medir">
+
+                        <summary>
+                            ¿Cómo medir la altura del manubrio?
+                            <span>+</span>
+                        </summary>
+
+                        <div class="detalle-contenido">
+
+                            <p>
+                                Medí desde el piso hasta el centro
+                                de la zona donde apoyás las manos.
+                            </p>
+
+                        </div>
+
+                    </details>
+
+                </article>
+
+            </div>
+
+
+            <!-- BOTÓN -->
+
+            <div class="zona-analizar">
+
+                <button id="botonCalcular" type="button">
+
+                    <span>
+                        ANALIZAR MI CONFIGURACIÓN
+                    </span>
+
+                    <span class="flecha">
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             RESULTADO
+        ====================================================== -->
+
+        <section id="resultado" class="resultado">
+
+            <div class="resultado-espera">
+
+                <p class="etiqueta">
+                    RESULTADO
+                </p>
+
+                <h2>
+                    Tu análisis aparecerá acá.
+                </h2>
+
+                <p>
+                    Completá las medidas anteriores
+                    y seleccioná “Analizar mi configuración”.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ESCALA
+        ====================================================== -->
+
+        <section
+            id="escalaBiomecanica"
+            class="escala-seccion oculto">
+
+            <div class="titulo-seccion">
+
+                <p class="etiqueta">
+                    POSICIÓN
+                </p>
+
+                <h2>
+                    Tu configuración,
+                    de un vistazo.
+                </h2>
+
+            </div>
+
+
+            <div class="escala">
+
+                <div class="escala-etiquetas">
+
+                    <span>
+                        ASIENTO BAJO
+                    </span>
+
+                    <span>
+                        RANGO ORIENTATIVO
+                    </span>
+
+                    <span>
+                        ASIENTO ALTO
+                    </span>
+
+                </div>
+
+
+                <div class="linea-escala">
+
+                    <div class="zona zona-baja"></div>
+
+                    <div class="zona zona-optima"></div>
+
+                    <div class="zona zona-alta"></div>
+
+
+                    <div
+                        id="indicadorEscala"
+                        class="indicador">
+
+                        <div class="indicador-punto"></div>
+
+                        <span>
+                            TU POSICIÓN
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             BIOMECÁNICA
+        ====================================================== -->
+
+        <section class="importancia">
+
+            <div class="titulo-seccion">
+
+                <p class="etiqueta">
+                    BIOMECÁNICA
+                </p>
+
+                <h2>
+                    ¿Por qué importa
+                    el ajuste?
+                </h2>
+
+            </div>
+
+
+            <div class="importancia-grid">
+
+                <article>
+
+                    <h3>
+                        Rodilla
+                    </h3>
+
+                    <p>
+                        La altura del asiento modifica
+                        la posición que adopta la rodilla
+                        durante las distintas fases
+                        del pedaleo.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Postura
+                    </h3>
+
+                    <p>
+                        La relación entre asiento y manubrio
+                        participa en la postura adoptada
+                        sobre la bicicleta.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Movimiento
+                    </h3>
+
+                    <p>
+                        Las medidas estáticas ofrecen un punto
+                        de partida que puede complementarse
+                        observando el movimiento durante
+                        el pedaleo.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             KINOVEA
+        ====================================================== -->
+
+        <section class="kinovea">
+
+            <div class="kinovea-contenido">
+
+                <p class="etiqueta">
+                    DEL CÁLCULO AL MOVIMIENTO
+                </p>
+
+                <h2>
+                    La antropometría es
+                    el punto de partida.
+
+                    <em>
+                        El movimiento completa el análisis.
+                    </em>
+                </h2>
+
+                <p>
+                    En el desarrollo académico de BIKEFIT,
+                    el pedaleo se analiza mediante video
+                    utilizando Kinovea para observar
+                    variables cinemáticas durante
+                    el movimiento.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ACLARACIÓN
+        ====================================================== -->
+
+        <section class="aclaracion">
+
+            <div>
+
+                <p class="etiqueta">
+                    IMPORTANTE
+                </p>
+
+                <h2>
+                    Una herramienta de orientación.
+                </h2>
+
+            </div>
+
+
+            <div>
+
+                <p>
+                    BIKEFIT es un prototipo académico
+                    desarrollado con fines educativos.
+                </p>
+
+                <p>
+                    Sus resultados constituyen una estimación
+                    orientativa y no reemplazan una evaluación
+                    biomecánica individual ni una consulta
+                    profesional ante dolor o lesión.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             EQUIPO
+        ====================================================== -->
+
+        <footer class="footer-bikefit">
+
+            <div class="footer-marca">
+
+                <h2>
+                    BIKEFIT
+                </h2>
+
+                <p>
+                    Ajustá tu bicicleta a vos.
+                </p>
+
+            </div>
+
+
+            <div class="footer-equipo">
+
+                <p class="footer-titulo">
+                    INGENIERAS BIOMÉDICAS
+                </p>
+
+                <div class="integrantes">
+
+                    <span>DIAS CELESTE</span>
+
+                    <span>KULICHEVKY LUCIA</span>
+
+                    <span>LARATRO VICTORIA</span>
+
+                    <span>PLANAS MACARENA</span>
+
+                    <span>TOROSSI ABRIL</span>
+
+                    <span>VIETTO AGUSTINA</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-proyecto">
+
+                <p>
+                    PROTOTIPO ACADÉMICO
+                </p>
+
+                <span>
+                    INGENIERÍA BIOMÉDICA
+                </span>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =====================================================
+         CARTEL EMERGENTE
+    ====================================================== -->
+
+    <div id="modalResultado" class="modal">
+
+        <div class="modal-fondo"></div>
+
+        <div class="modal-contenido">
+
+            <button
+                id="cerrarModal"
+                class="cerrar-modal"
+                type="button">
+                ×
+            </button>
+
+
+            <p
+                id="modalEtiqueta"
+                class="modal-etiqueta">
+
+                ANÁLISIS COMPLETADO
+
+            </p>
+
+
+            <h2 id="modalTitulo">
+
+                Tu configuración está dentro
+                del rango orientativo.
+
+            </h2>
+
+
+            <p id="modalTexto">
+
+                Podés continuar para ver
+                el análisis completo.
+
+            </p>
+
+
+            <button
+                id="verResultado"
+                class="ver-resultado"
+                type="button">
+
+                VER MI RESULTADO →
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- CONFETI -->
+
+    <div
+        id="confetti"
+        class="confetti-container">
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
